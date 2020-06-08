@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 dot.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        first += 1;
+        first +=".";
         result.setText(first );
     }
 });
@@ -132,7 +132,8 @@ dot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 first="";
-                result.setText(first );
+                enter_textview.setText("...");
+                result.setText(0);
             }
         });
         equal.setOnClickListener(new View.OnClickListener() {
