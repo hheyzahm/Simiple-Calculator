@@ -5,5 +5,5 @@
     <color name="colorBackGround">#607D8B</color>
     C<color name="ERR">#d50000</color>
     <color name="basic">#ff8f00</color>
-
+<color name="black">#000</color>
 </resources>

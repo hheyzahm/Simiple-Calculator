@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     Button one,two,three,four,five,six,seven,eight,nine,zero,clear,equal,addition
             ,subtraction,multiplication,divided,backward,percent,dot;
     String first="",answer="";
-    TextView result;
+    TextView result,enter_textview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         backward=findViewById(R.id.backward);
         dot=findViewById(R.id.dot);
         percent=findViewById(R.id.percent);
+        enter_textview=findViewById(R.id.enter_textview);
         result=findViewById(R.id.result);
 dot.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -140,10 +141,11 @@ dot.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Context  rhino= Context.enter();
                 rhino.setOptimizationLevel(-1);
-                result.setTextColor(getResources().getColor(R.color.basic));
+                result.setTextColor(getResources().getColor(R.color.black));
                try {
                    if (first.length() != 0) {
                        Scriptable scriptable = rhino.initStandardObjects();
+                       enter_textview.setText(first+" :");
                        answer= rhino.evaluateString(scriptable,first,"javascript",1,null).toString();
                    }
                }
