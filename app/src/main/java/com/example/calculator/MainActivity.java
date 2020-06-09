@@ -85,7 +85,7 @@ dot.setOnClickListener(new View.OnClickListener() {
         five.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                   first += 4;
+                   first += 5;
                    result.setText(first );
             }
         });
@@ -133,7 +133,7 @@ dot.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 first="";
                 enter_textview.setText("...");
-                result.setText(0);
+                result.setText("0");
             }
         });
         equal.setOnClickListener(new View.OnClickListener() {
